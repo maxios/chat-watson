@@ -1,0 +1,26 @@
+$white: white;
+$primary: #003B4A;
+$primary-light: #63CFE3;
+$primary-sky: #1DCAD3;
+$primary-sky-light: #C6F1F4;
+$primary-greenish: #00AFAA;
+$secondary-light: #F8F9FC;
+$secondary-shadow: #F1F3F9;
+$secondary-shiny: #DFF5F6;
+$secondary-sky: #F4FBFC;
+$secondary-dark: #131E29;
+
+@import 'colors.scss';
+
+$grid-horizontal-padding: 120px;
+$grid-horizontal-md-padding: 40px;
+$grid-horizontal-sm-padding: 16px;
+$header-height: 80px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

@@ -1,0 +1,131 @@
+$small-rem: 0.875rem;
+$medium-rem: 1rem;
+$large-rem: 1.5rem;
+
+@mixin p($rem) { padding: $rem; }
+@mixin pt($rem) { padding-top: $rem; }
+@mixin pb($rem) { padding-bottom: $rem; }
+@mixin mb($rem) { margin-bottom: $rem; }
+@mixin pl($rem) { padding-left: $rem; }
+@mixin pr($rem) { padding-right: $rem; }
+
+@mixin m($rem) { padding: $rem; }
+@mixin mt($rem) { padding-top: $rem; }
+@mixin mb($rem) { padding-bottom: $rem; }
+@mixin mb($rem) { margin-bottom: $rem; }
+@mixin ml($rem) { padding-left: $rem; }
+@mixin mr($rem) { padding-right: $rem; }
+
+@mixin py($rem) {
+  padding-top: $rem;
+  padding-bottom: $rem;
+}
+
+@mixin px($rem) {
+  padding-left: $rem;
+  padding-right: $rem;
+}
+
+@mixin my($rem) {
+  margin-top: $rem;
+  margin-bottom: $rem;
+}
+
+@mixin mx($rem) {
+  margin-left: $rem;
+  margin-right: $rem;
+}
+
+@mixin grid-horizontal-padding() {
+  padding-right: $grid-horizontal-padding;
+  padding-left: $grid-horizontal-padding;
+
+  @include media-breakpoint-down(md) {
+    padding-right: $grid-horizontal-md-padding;
+    padding-left: $grid-horizontal-md-padding;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-right: $grid-horizontal-sm-padding;
+    padding-left: $grid-horizontal-sm-padding;
+  }
+}
+
+.py-small { @include py($small-rem); }
+.py-medium { @include py($small-rem); }
+.py-large { @include py($small-rem); }
+
+.px-small { @include px($small-rem); }
+.px-medium { @include px($medium-rem); }
+.px-large { @include px($large-rem); }
+
+.pt-small { @include pt($small-rem) }
+.pt-medium { @include pt($medium-rem) }
+.pt-large { @include pt($large-rem) }
+
+.pb-small { @include pb($small-rem) }
+.pb-medium { @include pb($medium-rem) }
+.pb-large { @include pb($large-rem) }
+
+.pl-small { @include pl($small-rem) }
+.pl-medium { @include pl($medium-rem) }
+.pl-large { @include pl($large-rem) }
+
+.pr-small { @include pr($small-rem) }
+.pr-medium { @include pr($medium-rem) }
+.pr-large { @include pr($large-rem) }
+
+.p-small { @include p($small-rem) }
+.p-medium { @include p($medium-rem) }
+.p-large { @include p($large-rem) }
+
+.my-small { @include my($small-rem); }
+.my-medium { @include my($small-rem); }
+.my-large { @include my($small-rem); }
+
+.mx-small { @include mx($small-rem); }
+.mx-medium { @include mx($medium-rem); }
+.mx-large { @include mx($large-rem); }
+
+.mt-small { @include mt($small-rem) }
+.mt-medium { @include mt($medium-rem) }
+.mt-large { @include mt($large-rem) }
+
+.mb-small { @include mb($small-rem) }
+.mb-medium { @include mb($medium-rem) }
+.mb-large { @include mb($large-rem) }
+
+.ml-small { @include ml($small-rem) }
+.ml-medium { @include ml($medium-rem) }
+.ml-large { @include ml($large-rem) }
+
+.mr-small { @include mr($small-rem) }
+.mr-medium { @include mr($medium-rem) }
+.mr-large { @include mr($large-rem) }
+
+.m-small { @include m($small-rem) }
+.m-medium { @include m($medium-rem) }
+.m-large { @include m($large-rem) }
+
+.grid-horizontal-padding { @include grid-horizontal-padding }
+
+.flex-1 { flex: 1 };
+
+.medium-gutter > div {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.medium-gutter > div:first-child { margin-right: 25px; margin-left: 0; }
+.medium-gutter > div:last-child { margin-left: 25px; margin-right: 0; }
+
+.medium-gutter[dir="rtl"] > div:first-child { margin-left: 25px; margin-right: 0; }
+.medium-gutter[dir="rtl"] > div:last-child { margin-right: 25px; margin-left: 0; }
+
+@include media-breakpoint-up(md){
+  .medium-md-gutter > div:first-child { margin-right: 25px; margin-left: 0; }
+  .medium-md-gutter > div:last-child { margin-left: 25px; margin-right: 0; }
+
+  .medium-md-gutter[dir="rtl"] > div:first-child { margin-left: 25px; margin-right: 0; }
+  .medium-md-gutter[dir="rtl"] > div:last-child { margin-right: 25px; margin-left: 0; }
+}

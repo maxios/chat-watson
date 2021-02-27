@@ -1,0 +1,115 @@
+/**
+ * font faces
+ **/
+
+// @font-face {
+//   font-family: Proxima_Nova-Regular;
+//   src: url(./fonts/Proxima_Nova-Regular.otf);
+//   unicode-range: U+0000-007F;
+// }
+
+/**
+ * line heights
+ **/
+html {
+  line-height: 1.4;
+}
+
+html[dir="rtl"] {
+  line-height: 1.6
+}
+
+/**
+ * font sizes:
+ *  @usage: to determine the rem of the whole typography
+ **/
+html {
+  font-size: 16px;
+}
+
+
+@mixin font-weight-bold { font-weight: 800 }
+@mixin font-weight-regular { font-weight: 400 }
+
+// 60px in default screens
+// 30px in smaller screens
+@mixin large-display-font() {
+  font-size: 3.75rem;
+  @include font-weight-bold;
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+  }
+}
+
+// 40px in default screens
+// 24px in smaller screens
+@mixin medium-display-font() {
+  font-size: 2.5rem;
+  @include font-weight-bold;
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+}
+
+// 32px in default screen
+@mixin small-display-font() {
+  font-size: 2rem;
+  @include font-weight-bold;
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+}
+
+// 24px in default screen
+@mixin large-font() { font-size: 1.5rem; }
+
+// 16px in default screen
+@mixin medium-font() { font-size: 1rem; }
+
+// 14px in default screen
+@mixin small-font() { font-size: 0.875rem; }
+
+// static font for all screens
+@mixin font-static-8() { font-size: 8px; }
+@mixin font-static-14() { font-size: 14px; }
+@mixin font-static-16() { font-size: 16px; }
+@mixin font-static-18() { font-size: 18px; }
+@mixin font-static-20() { font-size: 20px; }
+@mixin font-static-32() { font-size: 32px; }
+
+
+.font-weight-bold { font-family: Proxima_Nova-Bold, Cairo-Bold; }
+.font-weight-regular { font-family: Proxima_Nova-Regular, Cairo-Regular; }
+.large-font { @include large-font; }
+.medium-font { @include medium-font; }
+.small-font { @include small-font; }
+.large-display-font { @include large-display-font }
+.medium-display-font { @include medium-display-font }
+.small-display-font { @include small-display-font }
+
+.font-static-8 { @include font-static-8 }
+.font-static-14 { @include font-static-14 }
+.font-static-16 { @include font-static-16 }
+.font-static-18 { @include font-static-18 }
+.font-static-20 { @include font-static-20 }
+.font-static-32 { @include font-static-32 }
+
+
+p {
+  font-size: 1rem;
+}
+
+
+// tablet screen
+@include media-breakpoint-down(md) {
+  html {
+    font-size: 14px;
+  }
+}
+
+// tablet and mobile screen
+@include media-breakpoint-down(sm) {
+  html {
+    font-size: 14px;
+  }
+}
