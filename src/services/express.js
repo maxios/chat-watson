@@ -18,7 +18,7 @@ app.use(express.static('public'))
 app.use('/api', apiRouter)
 
 export const start = app => {
-  app.listen(3000, (err) => {
+  app.listen(process.env.PORT || 3000, (err) => {
     if (err) {
       console.log(`Error : ${err}`)
       process.exit(-1)

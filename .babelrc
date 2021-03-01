@@ -1,13 +1,8 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    "@babel/plugin-transform-runtime",
-    "transform-optional-chaining",
+    "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-proposal-class-properties"
-  ],
-  "env": {
-    "production": {
-      "plugins": ["transform-remove-console"]
-    }
-  }
+  ]
+
 }
