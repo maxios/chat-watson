@@ -6,10 +6,10 @@ export default () => {
   const [success, setSuccess] = React.useState(false);
   const [isPending, setIsPending] = React.useState(false);
 
-  const fetchWrapper = ({path, body, ...restOpts}) => {
+  const fetchWrapper = ({path, body, hostname, ...restOpts}) => {
     setIsPending(true)
     return fetch(
-      `${process.env.API_HOST}/api${path}`,
+      `${hostname || ''}${path}`,
       {
         cors: 'cors',
         body: JSON.stringify(body),

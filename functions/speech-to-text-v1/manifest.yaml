@@ -1,0 +1,116 @@
+project:
+  namespace: _
+  packages:
+    speech-to-text-v1:
+      actions:
+        get-model:
+          function: actions/get-model.js
+          runtime: nodejs:10
+        list-models:
+          function: actions/list-models.js
+          runtime: nodejs:10
+        recognize:
+          function: actions/recognize.js
+          runtime: nodejs:10
+        check-job:
+          function: actions/check-job.js
+          runtime: nodejs:10
+        check-jobs:
+          function: actions/check-jobs.js
+          runtime: nodejs:10
+        create-job:
+          function: actions/create-job.js
+          runtime: nodejs:10
+        delete-job:
+          function: actions/delete-job.js
+          runtime: nodejs:10
+        register-callback:
+          function: actions/register-callback.js
+          runtime: nodejs:10
+        unregister-callback:
+          function: actions/unregister-callback.js
+          runtime: nodejs:10
+        create-language-model:
+          function: actions/create-language-model.js
+          runtime: nodejs:10
+        delete-language-model:
+          function: actions/delete-language-model.js
+          runtime: nodejs:10
+        get-language-model:
+          function: actions/get-language-model.js
+          runtime: nodejs:10
+        list-language-models:
+          function: actions/list-language-models.js
+          runtime: nodejs:10
+        reset-language-model:
+          function: actions/reset-language-model.js
+          runtime: nodejs:10
+        train-language-model:
+          function: actions/train-language-model.js
+          runtime: nodejs:10
+        upgrade-language-model:
+          function: actions/upgrade-language-model.js
+          runtime: nodejs:10
+        add-corpus:
+          function: actions/add-corpus.js
+          runtime: nodejs:10
+        delete-corpus:
+          function: actions/delete-corpus.js
+          runtime: nodejs:10
+        get-corpus:
+          function: actions/get-corpus.js
+          runtime: nodejs:10
+        list-corpora:
+          function: actions/list-corpora.js
+          runtime: nodejs:10
+        add-word:
+          function: actions/add-word.js
+          runtime: nodejs:10
+        add-words:
+          function: actions/add-words.js
+          runtime: nodejs:10
+        delete-word:
+          function: actions/delete-word.js
+          runtime: nodejs:10
+        get-word:
+          function: actions/get-word.js
+          runtime: nodejs:10
+        list-words:
+          function: actions/list-words.js
+          runtime: nodejs:10
+        create-acoustic-model:
+          function: actions/create-acoustic-model.js
+          runtime: nodejs:10
+        delete-acoustic-model:
+          function: actions/delete-acoustic-model.js
+          runtime: nodejs:10
+        get-acoustic-model:
+          function: actions/get-acoustic-model.js
+          runtime: nodejs:10
+        list-acoustic-models:
+          function: actions/list-acoustic-models.js
+          runtime: nodejs:10
+        reset-acoustic-model:
+          function: actions/reset-acoustic-model.js
+          runtime: nodejs:10
+        train-acoustic-model:
+          function: actions/train-acoustic-model.js
+          runtime: nodejs:10
+        upgrade-acoustic-model:
+          function: actions/upgrade-acoustic-model.js
+          runtime: nodejs:10
+        add-audio:
+          function: actions/add-audio.js
+          runtime: nodejs:10
+        delete-audio:
+          function: actions/delete-audio.js
+          runtime: nodejs:10
+        get-audio:
+          function: actions/get-audio.js
+          runtime: nodejs:10
+        list-audio:
+          function: actions/list-audio.js
+          runtime: nodejs:10
+        delete-user-data:
+          function: actions/delete-user-data.js
+          runtime: nodejs:10

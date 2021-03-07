@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
       }
     },
     output: {
-      filename: '[name].bundle.js',
+      filename: '[name]-[hash].bundle.js',
       path: path.resolve('dist'),
       publicPath: '/'
     },
@@ -77,9 +77,6 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: path.resolve(__dirname, 'index.html')
-      }),
-      new DefinePlugin({
-        'process.env': JSON.stringify(dotenv.config().parsed)
       }),
       new CleanWebpackPlugin({verbose: true})
     ],

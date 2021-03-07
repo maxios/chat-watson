@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form'
 import useFetch from '@/hooks/useFetch.js';
 import ChatLoader from '@/components/ChatLoader';
+import { ASSISTANT_V2_MESSAGE } from '@/constants/actions.js';
 
 const Foobar = () => {
   const {
@@ -27,7 +28,7 @@ const Foobar = () => {
     ])
     fetchWrapper({
       method: 'POST',
-      path: '/watson/sendMessage',
+      path: ASSISTANT_V2_MESSAGE,
       body: data,
     })
   }
