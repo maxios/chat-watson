@@ -34,6 +34,7 @@ const Foobar = () => {
   }
 
   React.useEffect(() => {
+    require('@/services/audio.js')
     if(success) {
       const messages = response.output.generic.map(m => ({...m, type: 'bot'}))
       setConversation([
@@ -45,6 +46,11 @@ const Foobar = () => {
 
   return (
     <div className="chat__container">
+      <div className="audio__container">
+        <div className="waveform">
+          <canvas className="js-canvas waveform__canvas"></canvas>
+        </div>
+      </div>
       <ul className="chat-thread">
         {
           conversation.length ? conversation.map((message, index) => (
